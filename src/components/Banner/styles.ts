@@ -1,37 +1,37 @@
 import styled from 'styled-components'
-import { TagContainer } from '../Tag/styles'
+import { cores } from '../../styles/GlobalStyles'
 
-export const Imagem = styled.div`
+export const BannerImage = styled.div`
   width: 100%;
-  height: 560px;
-  display: block;
+  height: 280px;
   background-repeat: no-repeat;
   background-size: cover;
-  font-weight: bold;
-
-  .container {
-    position: relative;
-    padding-top: 340px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  ${TagContainer} {
-    position: absolute;
-    top: 32px;
-  }
+  background-position: center;
+  position: relative; /* Adiciona um contexto de posicionamento para elementos filhos */
+  background-color: rgba(0, 0, 0, 0.4); /* Cor de sobreposição */
+  background-blend-mode: darken;
 `
 
-export const Titulo = styled.h2`
-  font-size: 36px;
-  max-width: 450px;
-`
-export const Precos = styled.p`
-  font-size: 24px;
-  margin-top: 24px;
+export const BannerContainer = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 30px;
+  color: ${cores.branca};
 
-  span {
-    text-decoration: line-through;
+  h3 {
+    font-weight: 100;
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin: 0;
   }
 `
